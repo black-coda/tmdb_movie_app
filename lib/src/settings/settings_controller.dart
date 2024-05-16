@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:go_router/go_router.dart';
+import 'package:tmdb_movie_app/src/router/route_manager.dart';
 
 import 'settings_service.dart';
 
@@ -48,3 +51,10 @@ class SettingsController with ChangeNotifier {
     await _settingsService.updateThemeMode(newThemeMode);
   }
 }
+
+
+//* Router controller
+
+final routerConfigProvider = Provider<GoRouter>((ref) {
+  return RouteManager.route;
+});

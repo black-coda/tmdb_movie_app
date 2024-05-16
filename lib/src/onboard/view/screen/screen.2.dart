@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:tmdb_movie_app/src/onboard/view/widget/btn.dart';
+import 'package:tmdb_movie_app/src/router/route_manager.dart';
 
 import '../widget/animation/fade_in_animation.dart';
 
@@ -110,7 +112,9 @@ class ContentWidget extends StatelessWidget {
             height: 42,
             width: double.infinity,
             child: FlatButton(
-              onPressed: () {},
+              onPressed: () {
+                context.pushReplacement(RouteManager.registerView);
+              },
               text: "Sign In",
               backgroundColor: const Color(0xff2A2E3D),
               foregroundColor: Colors.white,

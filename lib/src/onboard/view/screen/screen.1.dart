@@ -51,7 +51,7 @@ class _Screen1State extends State<Screen1> with SingleTickerProviderStateMixin {
                   "max",
                   style: TextStyle(
                     fontFamily: "RRR",
-                    fontSize: 45,
+                    fontSize: 160,
                     color: Colors.white,
                   ),
                 ),

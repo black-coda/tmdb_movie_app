@@ -13,13 +13,15 @@ class _SplashScreenState extends State<SplashScreen> {
   final PageController _pageController = PageController();
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: PageView(
-        controller: _pageController,
-        children: const [
-          Screen1(),
-          Screen2(),
-        ],
+    return SafeArea(
+      child: Scaffold(
+        body: PageView(
+          controller: _pageController,
+          children: const [
+            Screen1(),
+            Screen2(),
+          ],
+        ),
       ),
     );
   }
